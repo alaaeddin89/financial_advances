@@ -28,9 +28,6 @@ use App\Http\Controllers\BranchesController;
 |
 */
 
-
-
-
 Route::middleware(['auth','userInboxes','usermenu'])->group(function () { 
 
       Route::get("/",[\App\Http\Controllers\DashboardController::class,"index"])->name("
