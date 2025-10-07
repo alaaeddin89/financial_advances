@@ -1,0 +1,54 @@
+/*@media (min-width: 992px){*/
+
+/*    !*.aside-fixed .aside {*!*/
+/*    !*    FONT-WEIGHT: 500;*!*/
+/*    !*    position: fixed;*!*/
+/*    !*    top: 65;*!*/
+/*    !*    bottom: 0;*!*/
+/*    !*    right: 0;*!*/
+/*    !*    z-index: 101;*!*/
+/*    !*    overflow: hidden;*!*/
+/*    !*}*!*/
+/*    .aside-enabled.aside-fixed.header-fixed .header {*/
+/*        right: 0;*/
+/*        transition: right 0.3s ease;*/
+/*    }*/
+
+/*    .aside-enabled.aside-fixed.header-fixed[data-kt-aside-minimize=on] .header {*/
+/*        right: 0;*/
+/*        transition: right 0.3s ease;*/
+/*    }*/
+
+/*    .header-fixed.toolbar-fixed .toolbar {*/
+/*        top: 65px;*/
+/*        border-top: 0 solid;*/
+/*    }*/
+
+/*    .content {*/
+/*        padding: 10px 0 30px;*/
+/*    }*/
+/*    .col-id{*/
+/*        width: 12%;*/
+/*    }*/
+
+/*    .col-status-order{*/
+/*        width: 17%;*/
+/*    }*/
+
+/*    .col-date-order{*/
+/*        width: 14%;*/
+/*    }*/
+
+/*    .col-name-project{*/
+/*        width: 26%;*/
+/*    }*/
+
+/*}*/
+/*thead, tbody, tfoot, tr, td, th {*/
+/*    border-color: inherit;*/
+/*    border-style: solid;*/
+/*    border-width: 1px;*/
+/*}*/
+
+
+

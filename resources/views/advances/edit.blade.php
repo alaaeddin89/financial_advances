@@ -1,0 +1,100 @@
+@extends('layouts.app_admin')
+@section('title','تعديل ')
+@section('toolbar.title','لوحة التحكم')
+@section('breadcrumb')
+    <!--begin::Item-->
+    <li class="breadcrumb-item">
+        <span class="bullet bg-gray-400 w-5px h-2px"></span>
+    </li>
+
+    <li class="breadcrumb-item text-muted">@yield('title')</li>
+@endsection
+@section('content')
+    <!--begin::Form Widget 13-->
+    <div class="card">
+        <!--begin::Body-->
+        <div class="card-body py-1">
+            <!--begin:Form-->
+            <!--begin::Heading-->
+            <div class="mb-13 mt-5 text-start">
+                <!--begin::Title-->
+                <h1 class="mb-3">@yield('title')</h1>
+                <!--end::Title-->
+                <!--begin::Description-->
+                <div class="text-gray-400 fw-bold fs-5">
+                    <a href="{{route('sections.index')}}" class="fw-bolder link-primary">جميع الأقسام</a>.
+                </div>
+                <!--end::Description-->
+            </div>
+            <form id="form1" class="form" method="POST" action="javascript:void(0)">
+
+                @method("put")
+
+            @csrf
+            <!--begin::Input group-->
+                <div class="row g-9 mb-8">
+
+                    <div class="col-md-5 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                            <span class="required">التصنيف</span>
+                            <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                               title=" title "></i>
+                        </label>
+                        <!--end::Label-->
+                        <input id="" type="text" class="form-control form-control-solid"
+                               placeholder=""
+                               value=""
+                               name="title"/>
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <!--end::Actions-->
+            </form>
+            <!--end:Form-->
+        </div>
+        <!--begin::Body-->
+    </div>
+    <!--end::Form Widget 13-->
+@endsection
+@push('js')
+    @include("parts.sweetCreate", ['route' => "",'method'=>'put'])
+
+
+    <script>
+
+
+        $(function () {
+
+            let i =2;
+            $('.btn-add').click(function (e) {
+                e.preventDefault();
+                var newel = $(this).parent().parent().siblings('.group-duplicate').clone();
+                newel.show()
+                newel.find('input').prop("disabled", false);
+                newel.removeClass('group-duplicate')
+
+                $(newel).insertBefore($(this).parent().parent());
+
+                i++;
+            });
+
+
+
+            $(document).on("click", ".btn-remove", function (e) {
+
+                e.preventDefault();
+
+                $(this).parent().parent().parent().parent().parent().remove()
+                // Create clone of <div class='input-form'>
+
+            });
+
+
+        });
+    </script>
+
+@endpush
