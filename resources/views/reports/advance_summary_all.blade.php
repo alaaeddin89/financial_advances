@@ -217,5 +217,26 @@ function printReport() {
     document.body.innerHTML = originalBody;
     window.location.reload(); 
 }
+
+// تحديد القيم الافتراضية لحقلَي التاريخ
+document.addEventListener("DOMContentLoaded", function () {
+    // الحصول على التاريخ الحالي
+    const today = new Date();
+
+    // إنشاء تاريخ لأول يوم في الشهر الحالي
+    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+
+    // تنسيق التاريخ بصيغة YYYY-MM-DD
+    const formatDate = (date) => {
+        const year  = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day   = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    // تعبئة القيم في الحقول
+    document.getElementById('date_from').value = formatDate(firstDay);
+    document.getElementById('date_to').value   = formatDate(today);
+});
 </script>
 @endpush

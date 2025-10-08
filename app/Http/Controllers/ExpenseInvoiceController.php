@@ -243,7 +243,7 @@ class ExpenseInvoiceController extends Controller
             // الملاحظات إجبارية فقط إذا كانت فاتورة بدون مرفقات
             'description' => 'required_if:invoice_type,Invoice_without_Attachments|string|nullable',
             // المرفق إجباري في حالتين
-            'file' => 'required_if:invoice_type,Tax_Invoice,Invoice_with_Attachments|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file' => 'required_if:invoice_type,Tax_Invoice,Invoice_with_Attachments|file|mimes:pdf,jpg,jpeg,png|max:10240',
 
             // تحقق جديد لتخصيص الفروع:
             'branch_type' => 'required|in:single,multiple,general',
@@ -443,7 +443,7 @@ class ExpenseInvoiceController extends Controller
             'amount' => 'required|numeric|min:0.01',
             'invoice_date' => 'required|date',
             'description' => 'required_if:invoice_type,Invoice_without_Attachments|string|nullable',
-            'file' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:10240',
              // تحقق جديد لتخصيص الفروع:
              'branch_type' => 'required|in:single,multiple,general',
              'branch_id' => 'required_if:branch_type,single,multiple|array|nullable',

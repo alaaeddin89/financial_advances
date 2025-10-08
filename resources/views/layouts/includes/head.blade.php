@@ -82,5 +82,47 @@ z-index:100000
 select.select2{
 	    opacity: 1;
 }
+
+@media (max-width: 768px) {
+  #kt_header_mobile .burger-icon {
+    margin-left: 12px !important; /* زيادة التباعد بين الأزرار */
+  }
+  #kt_header_mobile #kt_header_mobile_topbar_toggle {
+    margin-left: 16px !important; /* مسافة أكبر لزر المستخدم */
+  }
+  #kt_header_mobile .d-flex.align-items-center {
+    gap: 10px; /* يجعل الأزرار متباعدة تلقائياً */
+  }
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;         /* حشوة كافية للنص */
+  border-radius: 6px;        /* زوايا ناعمة */
+  font-size: 0.95rem;        /* حجم خط متوسط */
+  font-weight: 600;          /* خط واضح */
+  line-height: 1.4;
+  white-space: nowrap;       /* يمنع انكسار الكلمة */
+  min-width: auto;           /* يمنع أي عرض ثابت */
+  width: auto;               /* يجعلها تتسع للنص */
+}
+
+.label-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.label-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.label-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
     
     </style>

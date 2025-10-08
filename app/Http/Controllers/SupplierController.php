@@ -70,7 +70,7 @@ class SupplierController extends Controller
             'tax_id_no' => 'required|string|max:30',
             'commercial_register_no' => 'required|string|max:100',
             'national_address' => 'required|string|max:255',
-            'attachments.*' => 'file|max:2048|mimes:jpg,png,pdf,jpeg',
+            'attachments.*' => 'file|max:10240|mimes:jpg,png,pdf,jpeg',
         ]);
 
         $attachments = [];
@@ -109,7 +109,7 @@ class SupplierController extends Controller
             'tax_id_no' => 'required|string|max:30',
             'commercial_register_no' => 'required|string|max:100',
             'national_address' => 'required|string|max:255',
-            'attachments.*' => 'file|max:2048|mimes:jpg,png,pdf,jpeg',
+            'attachments.*' => 'file|max:10240|mimes:jpg,png,pdf,jpeg',
         ]);
 
         // تجهيز البيانات العادية (بدون attachments)
