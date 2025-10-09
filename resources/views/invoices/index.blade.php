@@ -93,7 +93,7 @@
                             </label>
                             <!--end::Label-->
                             <select name="user_id" id="" class="form-control">
-                                <option hidden value="" selected>يرجى الاختيار</option>
+                               <option value="">الكل</option>
                                 @foreach($employees as $employee)
                                     <option value="{{ $employee->id }}">{{ $employee->full_name }}</option>
                                 @endforeach
@@ -166,7 +166,7 @@
                     <th class="min-w-20px text-center">تاريخ الفاتورة</th>
                     <th class="min-w-20px text-center">المبلغ المقفل</th>
                     <th class="min-w-50px text-center">حالة الإغلاق</th>
-                    
+                    <th class="max-w-180px text-center" >الكاشير</th>
                     <th class="min-w-200px text-center"></th>
 
                 </tr>

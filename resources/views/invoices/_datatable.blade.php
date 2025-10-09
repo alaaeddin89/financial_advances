@@ -112,7 +112,8 @@
                 {data: 'invoice_status', name: 'invoice_status'},
                 {data: 'invoice_date', name: 'invoice_date'},
                 {data: 'used_amount', name: 'used_amount'},
-                {data: 'closure_status', name: 'closure_status', orderable: false, searchable: false}, // ← العمود الجديد
+                {data: 'closure_status', name: 'closure_status'},
+                {data: 'user.full_name', name: 'user.full_name', orderable: false, searchable: false}, 
                 {data: 'action', name: 'action', orderable: false, searchable: false}
             ],
 

@@ -81,8 +81,9 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Form group-->
 								<!--begin::Action-->
 								<div class="pb-lg-0 pb-5">
-									<button type="submit" id="kt_login_singin_form_submit_button" 
-									class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">استمرار </button>
+								<button type="submit" id="kt_login_singin_form_submit_button" 
+									class="btn btn-primary d-flex align-items-center justify-content-center gap-2 font-weight-bold font-size-h6 px-8 py-3 my-4 w-100 shadow-sm">
+									 <i class="fas fa-sign-in-alt fs-4"></i> <span>تسجيل الدخول</span> </button>
 									
 								</div>
 								<!--end::Action-->

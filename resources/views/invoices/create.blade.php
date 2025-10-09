@@ -94,10 +94,11 @@
 
                 <div class="row g-4">
                     <!-- رقم الفاتورة -->
-                    <div class="col-md-6">
-                        <label class="form-label fw-bold">رقم الفاتورة</label>
-                        <input type="text" name="invoice_no" value="{{ old('invoice_no') }}" class="form-control" placeholder="رقم الفاتورة">
-                    </div>
+                    <div class="col-md-6"> 
+                        <label class="form-label fw-bold">رقم الفاتورة</label> 
+                        <input type="text" name="invoice_no" id="invoice_no" value="{{ old('invoice_no') }}" 
+                            class="form-control" placeholder="رقم الفاتورة"> 
+                                <small id="invoice_note" class="text-muted d-none"> غير مطلوب إدخاله إذا كانت الفاتورة بدون مرفقات </small> </div>
 
                     <!-- المبلغ -->
                     <div class="col-md-6">
@@ -230,5 +231,18 @@
             }
         });
     });
+
+    // إظهار الملاحظة عند اختيار "فاتورة بدون مرفقات" 
+    $('select[name="invoice_type"]').on('change', function() { 
+        if ($(this).val() === 'Invoice_without_Attachments') { 
+            $('#invoice_note').removeClass('d-none');
+        } else { 
+            $('#invoice_note').addClass('d-none'); 
+        } 
+    }); 
+    // تشغيل عند التحميل إذا تم اختيارها سابقاً 
+    if ($('select[name="invoice_type"]').val() === 'Invoice_without_Attachments') { 
+        $('#invoice_note').removeClass('d-none'); 
+    }
 </script>
 @endpush

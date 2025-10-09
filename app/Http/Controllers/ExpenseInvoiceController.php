@@ -52,6 +52,11 @@ class ExpenseInvoiceController extends Controller
                 // تطبيق قيد جلب العُهد الخاصة بالمستخدم الحالي فقط
                 $query->where('user_id', $userId);
 
+            }else {
+                // المحاسب أو الأدمن يمكنه اختيار كاشير محدد أو عرض الكل
+                if ($request->filled('user_id')) {
+                    $query->where('user_id', $request->input('user_id'));
+                }
             }
             
             if ($request->filled('date_from') && $request->filled('date_to')) {
